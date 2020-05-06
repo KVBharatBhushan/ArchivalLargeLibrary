@@ -5,8 +5,8 @@ Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extens
 
 
 #Config Login Details with Password Protection
-$User = "O365admin@crossshare.net"
-$PWord = ConvertTo-SecureString -String "Cambay#0987" -AsPlainText -Force
+$User = "O365admin@sampleshare.net"
+$PWord = ConvertTo-SecureString -String "*******" -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
   
 #Function to Copy a File
@@ -34,14 +34,14 @@ Function Copy-SPOFile([String]$SourceSiteURL, [String]$SourceFileURL, [String]$T
     }
 }
 
-$RootSiteURL = "https://crosssharenet.sharepoint.com"
-$SourceSiteURL="https://crosssharenet.sharepoint.com/sites/classictest"
-$TargetSiteURL = "https://crosssharenet.sharepoint.com/sites/testsitearchival"
+$RootSiteURL = "https://samplesharenet.sharepoint.com"
+$SourceSiteURL="https://samplesharenet.sharepoint.com/sites/classictest"
+$TargetSiteURL = "https://samplesharenet.sharepoint.com/sites/testsitearchival"
 $SourceSitePath = "/sites/classictest/"
 $TargetSitePath = "/sites/testsitearchival/"
 $SourceDocLibURL = "/PnPCopytoLib"
 $TargetDocLibURL = "/FlowArchiveLib2"
-#$TargetDocLibURL = "/FlowArchiveLib2/April_3rdWeek"
+#$TargetDocLibURL = "/FlowArchiveLib2/April_3rdWeek" For any Folder wise Archival Month/Quarter wise
 
 #$Credentials = Get-Credential
 Connect-PnPOnline -Url $TargetSiteURL -Credentials $Credential
