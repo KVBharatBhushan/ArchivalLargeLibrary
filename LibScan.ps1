@@ -5,7 +5,7 @@ Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extens
 Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
      
 #Config Parameters
-$SiteURL= "https://crosssharenet.sharepoint.com/sites/classictest"
+$SiteURL= "https://samplesharenet.sharepoint.com/sites/classictest"
 $ListName = "PnPCopytoLib"
 $CSVPath = "D:\LibraryDocumentsInventory.csv"
 
