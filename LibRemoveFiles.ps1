@@ -3,7 +3,7 @@ $User = "O365admin@sampleshare.net"
 $PWord = ConvertTo-SecureString -String "*********" -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 
-$SourceSiteURL="https://crosssharenet.sharepoint.com/sites/classictest"
+$SourceSiteURL="https://samplesharenet.sharepoint.com/sites/classictest"
 Connect-PnPOnline -Url $SourceSiteURL -Credentials $Credential
 
 $CSVPath = "D:\LibraryDocumentsInventory.csv"
